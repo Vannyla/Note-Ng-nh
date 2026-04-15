@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Báo Cáo Ngành Bất Động Sản – Triển Vọng 2026 | BSC Research</title>
+  <meta name="description" content="Báo cáo phân tích chuyên sâu ngành bất động sản Việt Nam, triển vọng Q2-Q3/2026 và các cổ phiếu BĐS đáng chú ý." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0f4c8a;
+      --primary-light: #1a6ec7;
+      --accent: #e8a020;
+      --accent-light: #f5c048;
+      --success: #16a34a;
+      --danger: #dc2626;
+      --warning: #d97706;
+      --bg-dark: #0a1628;
+      --bg-card: #0d1f3c;
+      --bg-card2: #102040;
+      --bg-surface: #142850;
+      --border: rgba(255,255,255,0.08);
+      --border-accent: rgba(232,160,32,0.3);
+      --text-primary: #f0f4f8;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --gradient-hero: linear-gradient(135deg, #0a1628 0%, #0f2d5a 50%, #0a1628 100%);
+      --gradient-card: linear-gradient(145deg, #102040, #0d1a30);
+      --gradient-accent: linear-gradient(135deg, #e8a020, #f5c048);
+      --gradient-green: linear-gradient(135deg, #16a34a, #22c55e);
+      --shadow-card: 0 8px 32px rgba(0,0,0,0.4);
+      --shadow-glow: 0 0 40px rgba(26,110,199,0.15);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: linear-gradient(90deg, #0a1628, #0f2d5a, #0a1628);
+      border-bottom: 1px solid var(--border-accent);
+      padding: 14px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-badge {
+      background: var(--gradient-accent);
+      color: #0a1628;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .logo-text { font-size: 14px; color: var(--text-secondary); font-weight: 500; }
+    .header-meta { font-size: 12px; color: var(--text-muted); }
+    .header-meta span { color: var(--accent); font-weight: 600; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--gradient-hero);
+      position: relative;
+      overflow: hidden;
+      padding: 70px 40px 60px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(26,110,199,0.12) 0%, transparent 70%);
+      top: -100px; left: 50%; transform: translateX(-50%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(232,160,32,0.12);
+      border: 1px solid var(--border-accent);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+      animation: fadeInDown 0.6s ease;
+    }
+    .hero-badge::before { content: '●'; font-size: 8px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    @keyframes fadeInDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #f0f4f8 30%, #94c8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeInDown 0.7s ease 0.1s both;
+    }
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto 36px;
+      animation: fadeInDown 0.7s ease 0.2s both;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.7s ease 0.3s both;
+    }
+    .hero-meta-item { text-align: center; }
+    .hero-meta-item .label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+    .hero-meta-item .value { font-size: 14px; color: var(--text-primary); font-weight: 600; margin-top: 2px; }
+
+    /* ── CONTAINER ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── SECTION ── */
+    .section { padding: 52px 0; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .section-icon {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .icon-blue { background: rgba(26,110,199,0.15); }
+    .icon-gold { background: rgba(232,160,32,0.15); }
+    .icon-green { background: rgba(22,163,74,0.15); }
+    .icon-red { background: rgba(220,38,38,0.12); }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+    }
+
+    /* ── SUMMARY BOX ── */
+    .executive-box {
+      background: linear-gradient(135deg, rgba(26,110,199,0.08), rgba(15,76,138,0.05));
+      border: 1px solid rgba(26,110,199,0.25);
+      border-left: 4px solid var(--primary-light);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 36px;
+    }
+    .executive-box p { color: var(--text-secondary); line-height: 1.8; font-size: 15px; }
+    .executive-box strong { color: var(--accent); }
+
+    /* ── GRID CARDS ── */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+      border-color: rgba(26,110,199,0.3);
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+    }
+    .card-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+    .card-value.green { color: #4ade80; }
+    .card-value.gold { color: var(--accent-light); }
+    .card-change {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+    .card-change.up { color: #4ade80; }
+    .card-change.down { color: #f87171; }
+    .card-desc { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+
+    /* ── HIGHLIGHT CARDS ── */
+    .highlight-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .highlight-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px;
+      height: 100%;
+    }
+    .highlight-card.blue::before { background: var(--primary-light); }
+    .highlight-card.gold::before { background: var(--accent); }
+    .highlight-card.green::before { background: var(--success); }
+    .highlight-card.red::before { background: var(--danger); }
+    .highlight-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .highlight-card.blue h3 { color: #93c5fd; }
+    .highlight-card.gold h3 { color: var(--accent-light); }
+    .highlight-card.green h3 { color: #86efac; }
+    .highlight-card.red h3 { color: #fca5a5; }
+    .highlight-card p { color: var(--text-secondary); font-size: 14px; line-height: 1.75; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* ── STOCK TABLE ── */
+    .stock-table-wrap {
+      overflow-x: auto;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+    }
+    .stock-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .stock-table thead tr {
+      background: linear-gradient(90deg, rgba(26,110,199,0.2), rgba(15,76,138,0.1));
+    }
+    .stock-table th {
+      padding: 14px 18px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .stock-table th:not(:first-child) { text-align: center; }
+    .stock-table td {
+      padding: 16px 18px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .stock-table td:not(:first-child) { text-align: center; }
+    .stock-table tr:last-child td { border-bottom: none; }
+    .stock-table tbody tr {
+      transition: background 0.15s;
+    }
+    .stock-table tbody tr:hover { background: rgba(26,110,199,0.05); }
+    .ticker-cell {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ticker-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(26,110,199,0.25), rgba(15,76,138,0.2));
+      border: 1px solid rgba(26,110,199,0.35);
+      color: #93c5fd;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .ticker-name { font-size: 13px; color: var(--text-muted); }
+    .rating-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .rating-buy { background: rgba(22,163,74,0.15); color: #4ade80; border: 1px solid rgba(22,163,74,0.3); }
+    .rating-hold { background: rgba(217,119,6,0.15); color: #fbbf24; border: 1px solid rgba(217,119,6,0.3); }
+    .rating-watch { background: rgba(100,116,139,0.15); color: #94a3b8; border: 1px solid rgba(100,116,139,0.3); }
+    .price-up { color: #4ade80; font-weight: 600; }
+    .price-neutral { color: var(--text-secondary); font-weight: 600; }
+
+    /* ── STOCK DETAIL CARDS ── */
+    .stock-detail {
+      background: var(--gradient-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .stock-detail:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+    }
+    .stock-detail-header {
+      padding: 22px 24px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .stock-detail-header .ticker {
+      font-size: 22px;
+      font-weight: 800;
+      color: #93c5fd;
+      letter-spacing: 1px;
+    }
+    .stock-detail-header .company {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+    .stock-detail-body { padding: 20px 24px; }
+    .stock-detail-body .thesis {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .catalyst-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .catalyst-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    .catalyst-list li::before {
+      content: '▸';
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .risk-tag {
+      display: inline-block;
+      background: rgba(220,38,38,0.1);
+      border: 1px solid rgba(220,38,38,0.25);
+      color: #fca5a5;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-top: 12px;
+    }
+    .target-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .target-item { text-align: center; flex: 1; min-width: 80px; }
+    .target-item .t-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; }
+    .target-item .t-value { font-size: 16px; font-weight: 700; color: var(--accent-light); margin-top: 2px; }
+    .target-item .t-value.green { color: #4ade80; }
+    .target-item .t-value.blue { color: #93c5fd; }
+
+    /* ── KEY POINTS ── */
+    .keypoints-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    @media (max-width: 700px) { .keypoints-grid { grid-template-columns: 1fr; } }
+    .keypoint {
+      background: var(--gradient-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+      display: flex;
+      gap: 14px;
+    }
+    .keypoint-num {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(26,110,199,0.25), rgba(15,76,138,0.2));
+      border: 1px solid rgba(26,110,199,0.35);
+      color: #93c5fd;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .keypoint-content h4 { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+    .keypoint-content p { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      background: rgba(100,116,139,0.08);
+      border: 1px solid rgba(100,116,139,0.2);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-top: 48px;
+    }
+    .disclaimer p { font-size: 12px; color: var(--text-muted); line-height: 1.65; }
+    .disclaimer strong { color: var(--text-secondary); }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: rgba(10,22,40,0.8);
+      border-top: 1px solid var(--border);
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-left { font-size: 13px; color: var(--text-muted); }
+    .footer-left span { color: var(--accent); font-weight: 600; }
+    .footer-right { font-size: 12px; color: var(--text-muted); }
+
+    /* ── TAGS ── */
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .tag {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(26,110,199,0.12);
+      border: 1px solid rgba(26,110,199,0.2);
+      color: #93c5fd;
+    }
+
+    /* ── DIVIDER WITH TEXT ── */
+    .divider-text {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 44px 0 36px;
+    }
+    .divider-text span {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .divider-text::before, .divider-text::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── SIGNAL ROW ── */
+    .signal-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      background: rgba(22,163,74,0.06);
+      border: 1px solid rgba(22,163,74,0.18);
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .signal-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .signal-dot.green { background: #4ade80; box-shadow: 0 0 8px #4ade8080; }
+    .signal-dot.gold { background: var(--accent); box-shadow: 0 0 8px rgba(232,160,32,0.5); }
+    .signal-label { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+    .signal-desc { font-size: 13px; color: var(--text-secondary); margin-left: auto; }
+
+    /* ── SCROLL FADE ANIMATION ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo">
+    <span class="logo-badge">BSC Research</span>
+    <span class="logo-text">Phòng Phân Tích Đầu Tư</span>
+  </div>
+  <div class="header-meta">Cập nhật: <span>15/04/2026</span> &nbsp;|&nbsp; Phân tích ngành BĐS</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Báo cáo chuyên đề · Q2/2026</div>
+  <h1>Triển Vọng Ngành Bất Động Sản<br/>Việt Nam 2026</h1>
+  <p class="hero-subtitle">Phân tích thị trường, định giá & các cổ phiếu BĐS đáng chú ý trong bối cảnh lãi suất điều chỉnh và pháp lý dần thông thoáng</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <div class="label">Quan điểm thị trường</div>
+      <div class="value" style="color:#4ade80;">Tích lũy – Tăng dần</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="label">Khung thời gian</div>
+      <div class="value">Q2 – Q4/2026</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="label">Tác giả phân tích</div>
+      <div class="value">Phòng Phân Tích BSC</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="label">Mức độ rủi ro</div>
+      <div class="value" style="color:#fbbf24;">Trung bình – Cao</div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main>
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="container section fade-in">
+    <div class="section-header">
+      <div class="section-icon icon-blue">📋</div>
+      <h2 class="section-title">Tóm Lược Phân Tích (Executive Summary)</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="executive-box">
+      <p>
+        Sau giai đoạn điều chỉnh kéo dài, thị trường bất động sản Việt Nam đang định hình lại với <strong>ba trụ cột hỗ trợ quan trọng</strong>: lãi suất hạ nhiệt, khung pháp lý thông thoáng hơn và nhu cầu thực có khả năng hấp thụ ổn định. Thanh khoản thị trường sơ cấp và thứ cấp năm 2025 đã ghi nhận <strong>tăng trưởng ~30% so với cùng kỳ</strong>, phản ánh tâm lý người mua cải thiện rõ rệt.
+      </p>
+      <br/>
+      <p>
+        Tồn kho ngành tăng cao không phản ánh cầu yếu, mà chủ yếu đến từ hàng loạt dự án tích lũy nhiều năm <strong>nay được cấp phép trở lại</strong>. Điều này tạo ra nguồn cung chất lượng tốt hơn cho thị trường trong giai đoạn 2026–2027. Tâm điểm thị trường đã <strong>dịch chuyển từ pháp lý sang năng lực triển khai</strong> – doanh nghiệp nào có quỹ đất sạch, tiền mặt mạnh và đối tác chiến lược sẽ chiếm ưu thế.
+      </p>
+    </div>
+
+    <!-- KPI CARDS -->
+    <div class="grid-3 fade-in">
+      <div class="card">
+        <div class="card-title">Thanh khoản thị trường 2025</div>
+        <div class="card-value green">+30%</div>
+        <div class="card-change up">↑ so với cùng kỳ 2024</div>
+        <div class="card-desc">Cả 3 phân khúc: chung cư, nhà riêng lẻ, đất nền đều tăng giao dịch</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Tín hiệu chính sách hỗ trợ</div>
+        <div class="card-value gold">3+</div>
+        <div class="card-change up">↑ Trong 10 ngày đầu tháng 4/2026</div>
+        <div class="card-desc">Chính phủ ban hành liên tục các gói hỗ trợ ngành BĐS</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Khả năng chịu đựng vay mua nhà</div>
+        <div class="card-value" style="color:#93c5fd;">Hợp lý</div>
+        <div class="card-change up">✓ Đánh giá tích cực</div>
+        <div class="card-desc">Ở mức lãi suất vay hiện tại, người mua có thể chấp nhận được</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- MARKET OVERVIEW -->
+  <div class="container section fade-in">
+    <div class="section-header">
+      <div class="section-icon icon-blue">🏗️</div>
+      <h2 class="section-title">I. Tổng Quan Thị Trường BĐS</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="highlight-card blue fade-in">
+      <h3>1.1 Tồn kho tăng: Cung chứ không phải cầu yếu</h3>
+      <p>
+        Hàng tồn kho ngành BĐS tăng cao trong 2024–2025 không phải do lãi suất cao làm giảm sức hấp thụ, mà phần lớn đến từ hàng loạt dự án bị tắc nghẽn pháp lý nhiều năm, nay được cấp phép đưa vào kinh doanh. Đây là <strong>tín hiệu tích cực</strong> về nguồn cung chất lượng trở lại thị trường có kiểm soát, thay vì sự sụt giảm cầu thực sự.
+      </p>
+    </div>
+
+    <div class="highlight-card gold fade-in">
+      <h3>1.2 Đánh đổi lãi suất – Giá nhà: Điểm cân bằng hiện tại</h3>
+      <p>
+        Thị trường hiện đối mặt với bài toán <strong>đánh đổi giữa mức giá bán và lãi suất vay</strong>. Tuy nhiên, với mức lãi suất hiện tại, khả năng chịu đựng của người mua nhà vẫn trong vùng có thể chấp nhận. Điều này tạo nền tảng cho thanh khoản duy trì ổn định, không có áp lực bán tháo hàng loạt như giai đoạn 2022–2023.
+      </p>
+    </div>
+
+    <div class="highlight-card green fade-in">
+      <h3>1.3 Tâm điểm mới: Năng lực triển khai thay vì pháp lý</h3>
+      <p>
+        Khác với giai đoạn trước khi câu chuyện thị trường xoay quanh pháp lý dự án, thị trường hiện nay <strong>chú trọng vào năng lực triển khai dự án và khả năng hấp thụ thực tế</strong>. Doanh nghiệp có dự án sẵn sàng bán, quỹ đất pháp lý sạch và đối tác tài chính mạnh sẽ được thị trường định giá tốt hơn.
+      </p>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- OUTLOOK -->
+  <div class="container section fade-in">
+    <div class="section-header">
+      <div class="section-icon icon-gold">🔭</div>
+      <h2 class="section-title">II. Triển Vọng Q2–Q4/2026</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <p style="color:var(--text-secondary);margin-bottom:28px;font-size:14.5px;">Có <strong style="color:var(--accent);">4 tín hiệu hội tụ</strong> cho thấy cổ phiếu BĐS đã tạo đáy và đang bước vào chu kỳ tích lũy mới:</p>
+
+    <div class="signal-row fade-in">
+      <div class="signal-dot green"></div>
+      <span class="signal-label">① Lãi suất tạo đỉnh</span>
+      <span class="signal-desc">Xu hướng lãi suất hạ nhiệt giảm gánh nặng cho cả doanh nghiệp lẫn người mua nhà</span>
+    </div>
+    <div class="signal-row fade-in">
+      <div class="signal-dot green"></div>
+      <span class="signal-label">② Chính phủ liên tục hỗ trợ ngành</span>
+      <span class="signal-desc">Hàng loạt chính sách hỗ trợ bất động sản ban hành trong tháng 4/2026</span>
+    </div>
+    <div class="signal-row fade-in">
+      <div class="signal-dot green"></div>
+      <span class="signal-label">③ Định giá cổ phiếu ở mức hấp dẫn</span>
+      <span class="signal-desc">Nhiều doanh nghiệp BĐS đang giao dịch ở mức thấp so với giá trị tài sản thực (P/B thấp)</span>
+    </div>
+    <div class="signal-row fade-in">
+      <div class="signal-dot gold"></div>
+      <span class="signal-label">④ Thị trường thực ấm trở lại</span>
+      <span class="signal-desc">Giao dịch sơ cấp, thứ cấp phục hồi; nhiều doanh nghiệp bắt đầu mở bán lại (Dat Xanh, Vinhomes, NLG...)</span>
+    </div>
+
+    <div class="divider-text"><span>Phân tích theo phân khúc</span></div>
+
+    <div class="grid-2 fade-in">
+      <div class="highlight-card blue">
+        <h3>🏙️ Phân khúc cao cấp & đại đô thị</h3>
+        <p>
+          Vinhomes dẫn đầu với mô hình phát triển tích hợp (đô thị – hạ tầng – thu hút FDI), đặc biệt là dự án Vin Olympic đang trong giai đoạn chuẩn bị mở bán. Mô hình <em>"chính quyền địa phương thu nhỏ"</em> của Vinhomes tạo lợi thế cạnh tranh bền vững về pháp lý và hạ tầng. Kỳ vọng hấp thụ tốt nhờ bán sỉ cho đối tác nước ngoài.
+        </p>
+      </div>
+      <div class="highlight-card gold">
+        <h3>🏘️ Phân khúc trung cấp – tích hợp</h3>
+        <p>
+          Nam Long Group (<strong>NLG</strong>) nổi bật với chiến lược sản phẩm tích hợp (nhà ở – thương mại – tiện ích), phù hợp với cả khung ngắn và dài hạn. Dòng tiền hoạt động ổn định, đang bắt đầu mở bán trở lại các dự án trọng điểm tại vùng ven TP.HCM và các tỉnh thành.
+        </p>
+      </div>
+      <div class="highlight-card green">
+        <h3>🔄 Phân khúc tái cơ cấu – phục hồi</h3>
+        <p>
+          Novaland (<strong>NVL</strong>) đang trong quá trình tái cơ cấu nợ và phục hồi hoạt động. FCF ~5.400 tỷ đồng/năm so với vốn hóa 40.000–50.000 tỷ cho thấy định giá chưa phản ánh đầy đủ tiềm năng. Tuy nhiên, <strong>áp lực dòng tiền ngắn hạn vẫn còn</strong> và cần theo dõi tiến độ tái cấu trúc.
+        </p>
+      </div>
+      <div class="highlight-card red">
+        <h3>⚠️ Phân khúc cần thận trọng</h3>
+        <p>
+          Các doanh nghiệp chưa có dự án mới, hoặc đang thoái lui khỏi thị trường TP.HCM như Khang Điền (<strong>KDH</strong>) cần đánh giá thêm về tiến độ triển khai dự án Tang Tao từ 2027. Rủi ro nằm ở việc mất đối tác chiến lược và chậm triển khai dự án trọng điểm.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- STOCK RECOMMENDATIONS -->
+  <div class="container section fade-in">
+    <div class="section-header">
+      <div class="section-icon icon-gold">📊</div>
+      <h2 class="section-title">III. Cổ Phiếu BĐS Đáng Chú Ý</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- QUICK TABLE -->
+    <div class="stock-table-wrap fade-in" style="margin-bottom:40px;">
+      <table class="stock-table">
+        <thead>
+          <tr>
+            <th>Mã / Doanh nghiệp</th>
+            <th>Khuyến nghị</th>
+            <th>Phân khúc</th>
+            <th>Khung đầu tư</th>
+            <th>Giá mục tiêu</th>
+            <th>Mức tăng kỳ vọng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="ticker-cell">
+                <span class="ticker-badge">NLG</span>
+                <div>
+                  <div style="font-weight:600;color:var(--text-primary);">Nam Long Group</div>
+                  <div class="ticker-name">Nhà ở tích hợp vùng ven</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="rating-badge rating-buy">MUA</span></td>
+            <td>Trung cấp – Tích hợp</td>
+            <td>Ngắn & Dài hạn</td>
+            <td class="price-up">—</td>
+            <td class="price-up">Tích lũy</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ticker-cell">
+                <span class="ticker-badge">NVL</span>
+                <div>
+                  <div style="font-weight:600;color:var(--text-primary);">Novaland</div>
+                  <div class="ticker-name">Tái cơ cấu – Phục hồi</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="rating-badge rating-buy">MUA</span></td>
+            <td>Cao cấp – Tái cơ cấu</td>
+            <td>Dài hạn</td>
+            <td class="price-up">~21.000đ (+25%)</td>
+            <td class="price-up">+25%</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ticker-cell">
+                <span class="ticker-badge">TCH</span>
+                <div>
+                  <div style="font-weight:600;color:var(--text-primary);">Taseco Holdings</div>
+                  <div class="ticker-name">BĐS công nghiệp & thương mại</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="rating-badge rating-buy">MUA</span></td>
+            <td>Thương mại – Khu CN</td>
+            <td>Ngắn hạn</td>
+            <td class="price-up">—</td>
+            <td class="price-up">Momentum</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ticker-cell">
+                <span class="ticker-badge">VHM</span>
+                <div>
+                  <div style="font-weight:600;color:var(--text-primary);">Vinhomes</div>
+                  <div class="ticker-name">Đại đô thị – Cao cấp</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="rating-badge rating-hold">THEO DÕI</span></td>
+            <td>Cao cấp – Quy mô lớn</td>
+            <td>Dài hạn</td>
+            <td class="price-neutral">—</td>
+            <td class="price-neutral">Bền vững</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ticker-cell">
+                <span class="ticker-badge">KDH</span>
+                <div>
+                  <div style="font-weight:600;color:var(--text-primary);">Khang Điền</div>
+                  <div class="ticker-name">Nhà ở TP.HCM</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="rating-badge rating-watch">QUAN SÁT</span></td>
+            <td>Trung – Cao cấp</td>
+            <td>Dài hạn (từ 2027)</td>
+            <td class="price-neutral">39.900đ</td>
+            <td class="price-neutral">Hợp lý</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ticker-cell">
+                <span class="ticker-badge">PDR</span>
+                <div>
+                  <div style="font-weight:600;color:var(--text-primary);">Phát Đạt</div>
+                  <div class="ticker-name">BĐS dân sinh – Miền Trung</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="rating-badge rating-watch">QUAN SÁT</span></td>
+            <td>Dân sinh – Phục hồi</td>
+            <td>Dài hạn</td>
+            <td class="price-neutral">—</td>
+            <td class="price-neutral">Theo dõi mở bán</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- DETAIL CARDS -->
+    <p style="color:var(--text-secondary);margin-bottom:24px;font-size:14px;">3 cổ phiếu ưu tiên theo quan điểm phòng phân tích:</p>
+
+    <div class="grid-3 fade-in">
+      <!-- NLG -->
+      <div class="stock-detail">
+        <div class="stock-detail-header">
+          <div>
+            <div class="ticker">NLG</div>
+            <div class="company">Nam Long Group</div>
+          </div>
+          <span class="rating-badge rating-buy">MUA</span>
+        </div>
+        <div class="stock-detail-body">
+          <div class="tags">
+            <span class="tag">Ngắn hạn</span>
+            <span class="tag">Dài hạn</span>
+            <span class="tag">Dòng tiền ổn định</span>
+          </div>
+          <p class="thesis">
+            Nam Long là lựa chọn ưu tiên cho cả 2 khung thời gian. Chiến lược phát triển dự án tích hợp (housing + commercial + amenities) tại vùng ven TP.HCM và các tỉnh thành cho phép hấp thụ ổn định, ít phụ thuộc vào chính sách lãi suất ngắn hạn.
+          </p>
+          <ul class="catalyst-list">
+            <li>Đang mở bán trở lại các dự án lớn tại Long An, Đồng Nai</li>
+            <li>Dòng tiền hoạt động cải thiện rõ qua từng quý</li>
+            <li>Hưởng lợi trực tiếp từ lãi suất giảm (vay thế chấp mua nhà)</li>
+            <li>Định giá hấp dẫn tương đối so với NAV</li>
+          </ul>
+          <div class="target-row">
+            <div class="target-item">
+              <div class="t-label">Xu hướng</div>
+              <div class="t-value green">Tích lũy</div>
+            </div>
+            <div class="target-item">
+              <div class="t-label">Khung</div>
+              <div class="t-value blue">2 chiều</div>
+            </div>
+            <div class="target-item">
+              <div class="t-label">Rủi ro</div>
+              <div class="t-value" style="color:#fbbf24;">Trung bình</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NVL -->
+      <div class="stock-detail">
+        <div class="stock-detail-header">
+          <div>
+            <div class="ticker">NVL</div>
+            <div class="company">Novaland</div>
+          </div>
+          <span class="rating-badge rating-buy">MUA</span>
+        </div>
+        <div class="stock-detail-body">
+          <div class="tags">
+            <span class="tag">Tái cơ cấu</span>
+            <span class="tag">Cao cấp</span>
+            <span class="tag">Định giá thấp</span>
+          </div>
+          <p class="thesis">
+            Novaland đang giao dịch ở mức P/B rất thấp (~0.8x). FCF đạt ~5.400 tỷ/năm trong khi vốn hóa 40.000–50.000 tỷ → P/FCF ~8–9x là hấp dẫn. Mục tiêu ngắn hạn là 1 lần upside ~25%, kỳ vọng giá về ~21.000đ. Dài hạn phụ thuộc vào tiến độ tái cơ cấu và tiếp cận tín dụng mới.
+          </p>
+          <ul class="catalyst-list">
+            <li>Nhận diện thương hiệu vẫn tốt tại TP.HCM (giá 150 triệu++/m²)</li>
+            <li>Người mua ngày càng am hiểu pháp lý, ít nhạy cảm với thương hiệu từng "có vấn đề"</li>
+            <li>Nếu tiếp cận được tín dụng ngân hàng → cơ hội phục hồi rất lớn</li>
+            <li>Áp lực dòng tiền ngắn hạn còn nhưng đang được kiểm soát</li>
+          </ul>
+          <div class="risk-tag">⚠ Rủi ro dòng tiền ngắn hạn</div>
+          <div class="target-row">
+            <div class="target-item">
+              <div class="t-label">Mục tiêu</div>
+              <div class="t-value">~21.000đ</div>
+            </div>
+            <div class="target-item">
+              <div class="t-label">Upside</div>
+              <div class="t-value green">+25%</div>
+            </div>
+            <div class="target-item">
+              <div class="t-label">Khung</div>
+              <div class="t-value blue">Dài hạn</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TCH -->
+      <div class="stock-detail">
+        <div class="stock-detail-header">
+          <div>
+            <div class="ticker">TCH</div>
+            <div class="company">Taseco Holdings</div>
+          </div>
+          <span class="rating-badge rating-buy">MUA</span>
+        </div>
+        <div class="stock-detail-body">
+          <div class="tags">
+            <span class="tag">Ngắn hạn</span>
+            <span class="tag">Momentum</span>
+            <span class="tag">Thương mại</span>
+          </div>
+          <p class="thesis">
+            TCH là lựa chọn ngắn hạn với câu chuyện momentum rõ ràng hơn. Mảng thương mại và bất động sản khu công nghiệp hưởng lợi từ dòng vốn FDI tiếp tục đổ vào. Thanh khoản cổ phiếu tốt, phù hợp chiến lược trading ngắn hạn song song với đà phục hồi ngành.
+          </p>
+          <ul class="catalyst-list">
+            <li>Dự án thương mại – khu công nghiệp: dòng tiền ổn định hơn nhà ở</li>
+            <li>Hưởng lợi gián tiếp từ FDI và nhu cầu BĐS logistics</li>
+            <li>Định giá chưa phản ánh đầy đủ giá trị tài sản</li>
+          </ul>
+          <div class="target-row">
+            <div class="target-item">
+              <div class="t-label">Chiến lược</div>
+              <div class="t-value green">Trading</div>
+            </div>
+            <div class="target-item">
+              <div class="t-label">Khung</div>
+              <div class="t-value blue">Ngắn hạn</div>
+            </div>
+            <div class="target-item">
+              <div class="t-label">Rủi ro</div>
+              <div class="t-value" style="color:#fbbf24;">Trung bình</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- VINHOMES DEEP DIVE -->
+  <div class="container section fade-in">
+    <div class="section-header">
+      <div class="section-icon icon-blue">🔍</div>
+      <h2 class="section-title">IV. Góc Nhìn Chuyên Sâu: Vinhomes (VHM)</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="executive-box">
+      <p>
+        Vinhomes không nên được nhìn nhận như một doanh nghiệp BĐS thuần túy. Mô hình hoạt động của Vinhomes gần với <strong>"chính quyền địa phương thu nhỏ"</strong> – họ tự hoàn chỉnh mọi khâu từ pháp lý sử dụng đất, hạ tầng, thu hút đối tác nước ngoài đến quản lý tòa nhà. Điều này tạo ra lợi thế cạnh tranh gần như không thể sao chép với các doanh nghiệp cùng ngành.
+      </p>
+    </div>
+
+    <div class="grid-2 fade-in">
+      <div class="highlight-card blue">
+        <h3>Dự án Vin Olympic – Cơ hội trung hạn</h3>
+        <p>
+          Dự án đang chuẩn bị mở bán với chiến lược tiếp cận đối tác bán sỉ nước ngoài (FDI). Tiến độ sử dụng đất phụ thuộc vào (1) tiến độ huy động vốn và (2) tiến độ bán sỉ. Nếu hấp thụ không đạt kỳ vọng, áp lực vẫn được kiểm soát nhờ cấu trúc tài chính linh hoạt – <strong>không có áp lực lớn với Việt Nam/Vinhomes</strong>.
+        </p>
+      </div>
+      <div class="highlight-card gold">
+        <h3>Chiến lược bán sỉ – Giảm rủi ro hấp thụ</h3>
+        <p>
+          Mô hình ưu tiên bán sỉ cho đối tác trước khi đầu tư hạ tầng đại trà giúp Vinhomes <strong>kiểm soát rủi ro dòng tiền</strong>. Đây là điểm khác biệt lớn so với phần lớn chủ đầu tư nội địa. Tuy nhiên, cần theo dõi sát mức độ cam kết thực tế từ các đối tác FDI.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- KEY TAKEAWAYS -->
+  <div class="container section fade-in">
+    <div class="section-header">
+      <div class="section-icon icon-green">💡</div>
+      <h2 class="section-title">V. Điểm Nhấn & Kết Luận Đầu Tư</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="keypoints-grid fade-in">
+      <div class="keypoint">
+        <div class="keypoint-num">1</div>
+        <div class="keypoint-content">
+          <h4>Đánh đổi giá nhà – lãi suất vẫn trong vùng an toàn</h4>
+          <p>Ở mức lãi suất vay hiện tại, toàn bộ phân khúc sản phẩm từ trung cấp đến cao cấp đều có người mua có thể chấp nhận. Đây là nền tảng thanh khoản bền vững.</p>
+        </div>
+      </div>
+      <div class="keypoint">
+        <div class="keypoint-num">2</div>
+        <div class="keypoint-content">
+          <h4>Thị trường đã tạo đáy – thời điểm tích lũy tốt</h4>
+          <p>6 tháng điều chỉnh sâu tạo ra mặt bằng giá cổ phiếu BĐS thấp. Đây là cơ hội tích lũy có chọn lọc với tầm nhìn 12–18 tháng.</p>
+        </div>
+      </div>
+      <div class="keypoint">
+        <div class="keypoint-num">3</div>
+        <div class="keypoint-content">
+          <h4>Lãi suất giảm: Hưởng lợi đồng thuận toàn ngành</h4>
+          <p>Doanh nghiệp hưởng lợi nhiều nhất là những đơn vị có dự án đang chờ mở bán nhưng bị hoãn do lãi suất cao: Vinhomes, TCH, Đất Xanh.</p>
+        </div>
+      </div>
+      <div class="keypoint">
+        <div class="keypoint-num">4</div>
+        <div class="keypoint-content">
+          <h4>Rủi ro chính sách toàn cầu cần theo dõi</h4>
+          <p>Bối cảnh thuế quan Mỹ có thể ảnh hưởng gián tiếp đến FDI và dòng vốn BĐS khu công nghiệp. Không loại trừ kịch bản biến động ngắn hạn.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONCLUSION -->
+    <div class="highlight-card green" style="margin-top:28px;">
+      <h3>✅ Kết luận: Tích lũy có chọn lọc – Ưu tiên NLG, NVL, TCH</h3>
+      <p>
+        Ngành BĐS Việt Nam đang hội tụ đủ điều kiện để bước vào chu kỳ phục hồi bền vững trong giai đoạn Q2–Q4/2026. Các nhà đầu tư có thể <strong>bắt đầu tích lũy có chọn lọc</strong> các cổ phiếu đầu ngành có nền tảng pháp lý sạch, quỹ đất sẵn sàng triển khai và năng lực tài chính tốt. Ba cổ phiếu ưu tiên theo quan điểm phòng phân tích là: <strong>NLG</strong> (trong cả 2 khung ngắn và dài hạn), <strong>NVL</strong> (dài hạn – phục hồi cơ cấu), và <strong>TCH</strong> (ngắn hạn – momentum). Tiếp tục theo dõi CO, PDR, VHM khi có tín hiệu hiệu suất rõ ràng hơn.
+      </p>
+    </div>
+
+    <div class="disclaimer">
+      <p>
+        <strong>Lưu ý quan trọng (Disclaimer):</strong> Báo cáo này được tổng hợp từ buổi thảo luận nội bộ phòng phân tích ngày 15/04/2026. Thông tin và quan điểm trong báo cáo mang tính tham khảo và không cấu thành khuyến nghị đầu tư chính thức. Các mức giá mục tiêu và kỳ vọng lợi nhuận được xây dựng dựa trên mô hình định giá nội bộ và có thể thay đổi theo điều kiện thị trường. Nhà đầu tư cần tự đánh giá rủi ro và tham khảo ý kiến chuyên gia trước khi đưa ra quyết định đầu tư. <strong>BSC không chịu trách nhiệm đối với bất kỳ tổn thất nào phát sinh từ việc sử dụng thông tin trong báo cáo này.</strong>
+      </p>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-left">© 2026 <span>BSC Research – Phòng Phân Tích Đầu Tư</span> · Báo cáo nội bộ</div>
+  <div class="footer-right">Ngành BĐS · Cập nhật 15/04/2026 · Định kỳ hàng tháng</div>
+</footer>
+
+<script>
+  // Scroll fade-in animation
+  const fadeItems = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  fadeItems.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
